@@ -228,7 +228,10 @@ Hint: Use the String.prototype.split() method to separate the first and last
       After splitting the names, rearrange them to the "First Last" format.
 */
 
-let firstLast = [];
+const firstLast = people.map((person) => {
+    const [last, first] = person.split(", ");
+    return `${first} ${last}`
+})
 
 // Complete the exercise in the space below:
 
