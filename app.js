@@ -296,7 +296,7 @@ in the array is
 */
 
 const isAdultPresent = devs.some((dev) => {
-    return 2025 - dev.year >= 18
+    return 2025 - dev.year >= 18;
 
 });
 
@@ -306,11 +306,30 @@ const isAdultPresent = devs.some((dev) => {
 console.log('Exercise 6 my result: ', isAdultPresent);
 console.log('Exercise 6 correct result: ', true);
 
-
-// const devs = [
-//     { name: 'Alex', year: 1988 },
-//     { name: 'Dani', year: 1986 },
-//     { name: 'Matt', year: 1970 },
-//     { name: 'Wes', year: 2015 },
-//   ];
   
+/*
+Exercise 7: Array.prototype.every()
+
+Use Array.prototype.every() to determine if every person
+ in the devs array is 
+19 years old or older.
+
+- You have an array of individuals, each with their 
+year of birth represented
+  by the 'year' property.
+- Use the Array.prototype.every() method to verify if
+ every individual in the
+  array is at least 19 years old.
+- Store the result (true or false) in the variable 
+'isEveryone19OrOlder'.
+*/
+
+const isEveryone19OrOlder = devs.every((devv) => {
+    return 2025 - devv.year >= 19;
+});
+
+// Complete the exercise in the space below:
+
+// Check your work:
+console.log('Exercise 7 my result: ', isEveryone19OrOlder);
+console.log('Exercise 7 correct result: ', false);
