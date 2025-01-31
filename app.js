@@ -138,8 +138,14 @@ Hint: Return a new object literal from the callback that looks like:
 
 
 const inventorNames = inventors.map((inventor) => {
-    return `${inventor.first} + ${inventor.last} }`
+  const inventorObj = {}
+  inventorObj.first = inventor.first;
+  inventorObj.last = inventor.last;
+    return inventorObj
 });
+//this is how you do a simple version because you are grabbing
+//the first and last for inventor
+// return {first: inventor.first, last: inventor.last};
 
 // Check your work:
 console.log('Exercise 2 my result: ', inventorNames);
@@ -202,7 +208,7 @@ from an array of inventor objects
 */
 
 const inventorNamedAda = inventors.find((ada) => {
-    return inventors.first === 'Ada';
+    return ada.first === 'Ada';
 });
 
 // Complete the exercise in the space below:
